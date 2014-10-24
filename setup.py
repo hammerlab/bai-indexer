@@ -6,7 +6,7 @@ try:
 except (IOError, ImportError):
    description = ''
 
-setup(name='bai_indexer',
+setup(name='bai-indexer',
       version='0.1.1',
       description='An index for your BAM Index (BAI)',
       long_description=description,

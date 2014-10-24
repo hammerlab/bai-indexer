@@ -32,7 +32,7 @@ small subset of the BAM index that it actually needs.
 Usage
 -----
 
-    pip install bai_indexer
+    pip install bai-indexer
 
     bai-indexer path/to/file.bam.bai > path/to/file.bam.bai.json
 
