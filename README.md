@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/danvk/bai-indexer.svg?branch=master)](https://travis-ci.org/danvk/bai-indexer)
 
-
 bai-indexer
 ===========
 
@@ -10,8 +9,8 @@ Background
 ----------
 
 [BAM][1] is a common file format for storing aligned reads from a gene
-sequencing machine. These files can get enormous, so it's helpful to have an
-index to support fast lookup.
+sequencing machine. These files can get enormous (100+ GB), so it's helpful to
+have an index to support fast lookup.
 
 [Samtools][2] defines a file format for a BAM index and provides a simple
 command for generating one:
