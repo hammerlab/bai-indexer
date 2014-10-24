@@ -33,7 +33,7 @@ class InvalidBaiFileError(Exception):
     pass
 
 
-def extract_offsets(data_stream):
+def index_stream(data_stream):
     """Generate an index of a BAM Index (BAI) file.
 
     Args:
@@ -106,5 +106,5 @@ def extract_offsets(data_stream):
 
 if __name__ == '__main__':
     data = open(sys.argv[1], 'rb')
-    out = extract_offsets(data)
+    out = index_stream(data)
     print json.dumps(out)
