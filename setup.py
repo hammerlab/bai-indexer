@@ -12,7 +12,7 @@ setup(name='bai-indexer',
       long_description=description,
       author='Dan Vanderkam',
       author_email='danvdk@gmail.com',
-      url='https://github.com/danvk/bai_indexer/',
+      url='https://github.com/danvk/bai-indexer/',
       entry_points={
           'console_scripts': [
               'bai-indexer = bai_indexer:run',
