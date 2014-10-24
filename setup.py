@@ -7,7 +7,7 @@ except (IOError, ImportError):
    description = ''
 
 setup(name='bai_indexer',
-      version='0.1.0',
+      version='0.1.1',
       description='An index for your BAM Index (BAI)',
       long_description=description,
       author='Dan Vanderkam',
