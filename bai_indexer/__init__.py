@@ -123,7 +123,7 @@ def index_stream(bai_stream):
     }
 
 
-if __name__ == '__main__':
+def run():
     if len(sys.argv) != 2:
         sys.stderr.write(__doc__)
         sys.exit(1)
@@ -133,3 +133,7 @@ if __name__ == '__main__':
     data = open(sys.argv[1], 'rb')
     out = index_stream(data)
     print json.dumps(out)
+
+
+if __name__ == '__main__':
+    run()
