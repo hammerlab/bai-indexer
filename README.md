@@ -34,6 +34,30 @@ Usage
 
     bai_indexer.py path/to/file.bam.bai > path/to/file.bam.bai.json
 
+Format
+------
+
+The JSON index index looks like this:
+
+```json
+{
+  "chunks": [
+    [8, 716520],
+    [716520, 1463832],
+    [1463832, 2070072],
+    ...
+  ],
+  "minBlockIndex": 1234
+}
+```
+
+The first chunk (`[8, 716520]`) specifies the byte range in the BAI file which
+describes the first ref (most likely `chr1` for a human genome). This is a
+half-open `[start, stop)` interval.
+
+The `minBlockIndex` field specifies the position of the first block in the BAM
+file. Everything before this position is headers.
+
 Development
 -----------
 
