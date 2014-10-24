@@ -53,6 +53,8 @@ def index_stream(data_stream):
     Raises:
         InvalidBaiFileError: if the bytes do not comprise a valid BAI file.
     """
+    # The logic and naming below follow the diagram on page 16 of
+    # http://samtools.github.io/hts-specs/SAMv1.pdf
     magic = data_stream.read(4)
     if magic != 'BAI\x01':
         raise InvalidBaiFileError('This is not a BAI file (missing magic)')
