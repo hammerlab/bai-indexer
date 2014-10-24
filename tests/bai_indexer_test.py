@@ -2,6 +2,8 @@ from nose.tools import *
 
 from bai_indexer import index_stream
 
+import StringIO
+
 
 def test_file_a():
     eq_({
@@ -22,3 +24,15 @@ def test_file_c():
             'chunks': [(8, 88), (88, 168)],
             'minBlockIndex': 177
         }, index_stream(open('tests/test_input_1_c.bam.bai')))
+
+
+def test_stdin():
+    # sys.stdin only has a read() method.
+    stream = open('tests/test_input_1_c.bam.bai')
+    class FakeStdin(object):
+        read = stream.read
+
+    eq_({
+            'chunks': [(8, 88), (88, 168)],
+            'minBlockIndex': 177
+        }, index_stream(FakeStdin()))
