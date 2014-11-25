@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/danvk/bai-indexer.svg?branch=master)](https://travis-ci.org/danvk/bai-indexer)
+[![Build Status](https://travis-ci.org/hammerlab/bai-indexer.svg?branch=master)](https://travis-ci.org/hammerlab/bai-indexer)
 
 bai-indexer
 ===========
