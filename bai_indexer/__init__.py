@@ -96,7 +96,9 @@ def index_stream(bai_stream):
         for j in range(0, n_intv):
             ioffset = _read_uint64(data_stream)
             if ioffset:
-                # This mirrors dalliance's calculation, but I don't trust it.
+                # These values are "virtual offsets". The first 48 bits are the
+                # offset of the start of the compression block in the BAM file.
+                # The remaining 16 bits are an offset into the inflated block.
                 bi = ioffset / 65536
                 if ioffset % 65536 != 0:
                     bi += 65536
